@@ -1,49 +1,33 @@
-let xLine = 0;
-let yLine = 0;
-let a, b, c, d;
-a = setInterval(moveRight, 100);
-function moveRight(){
-    $('#move').offset({left : xLine});
+let xLine = 10;
+let yLine = 10;
+let a = setInterval(moveRight, 20);
+
+function moveRight() {
+
+    $('#move').offset({ left: xLine });
+    $('#move').offset({ top: yLine });
+
     xLine++;
-    bb = setTimeout(moveDown, 21000);
-    if(xLine > 200){
+    let bb = setTimeout(moveDown, 4000);
+    if (xLine > 200) {
         clearInterval(a);
-    }   
-}
-
-
-
-function moveDown(){
-    $('#move').offset({top : yLine});
-    yLine++;
-    cc = setTimeout(moveLeft, 21000);
-    if(yLine > 200){
-        clearInterval(b);
-    }   
-}
-
-//b = setInterval(moveDown, 100);
-
-
-function moveLeft(){
-    $('#move').offset({left : xLine});
-    xLine--;
-    dd = setTimeout(moveUp, 21000);
-    if(xLine < 0){
-        clearInterval(c);
     }
 }
 
-//c = setInterval(moveLeft, 100);
-
-
-function moveUp(){
-    $('#move').offset({top : yLine});
-    yLine--;
-    aa = setTimeout(moveRight, 21000);
-    if(yLine < 0){
-        clearInterval(d);
-    }   
+function moveDown() {
+    $('#move').offset({ top: yLine });
+    yLine++;
+    let cc = setTimeout(moveLeft, 4000);
 }
 
-//d = setInterval(moveUp, 100);
+function moveLeft() {
+    $('#move').offset({ left: xLine });
+    xLine--;
+    let dd = setTimeout(moveUp, 4000);
+}
+
+function moveUp() {
+    $('#move').offset({ top: yLine });
+    yLine--;
+    let aa = setTimeout(moveRight, 4000);
+}
