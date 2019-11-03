@@ -1,12 +1,15 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
     border: 1px solid black;
-    height: 245px;
-    width: 245px;
+    height: 253px;
+    width: 253px;
 }
 
 div {
@@ -15,4 +18,23 @@ div {
     width: 50px;
     height: 50px;
     text-align: center;
+}
+
+#button {
+    border: 1px solid orange;
+    width: 253px;
+    height: 253px;
+    box-sizing: border-box;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: red;
+    border: 1px solid black;
+    width: 60px;
+    height: 25px;
+    position: relative;
 }
