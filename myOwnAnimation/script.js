@@ -89,6 +89,6 @@ let clickMeIfYouCan = document.getElementById('move').onclick = function() {
     interval();
     if (step <= 0) {
         stopButton();
-        alert('You are win!!!!Congrets!!!!');
+        alert('You win!!!!Congretes!!!!');
     }
 }
